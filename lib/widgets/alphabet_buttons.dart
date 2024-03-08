@@ -27,21 +27,29 @@ class AlphabetButtons extends ConsumerWidget {
           spacing: 12,
           children: [
             ...GameAlphabet.alphabet.map(
-              (e) => OutlinedButton(
-                onPressed:
-                    controller.usedLetters.contains(e) ? null : () => onTap(e),
-                child: Text(
-                  e,
-                  style: theme.textTheme.titleLarge!.copyWith(
-                      fontSize: 32,
-                      color: controller.usedLetters.contains(e)
-                          ? Colors.red
-                          : controller.nextLetter == e
-                              ? Colors.green
-                              : null,
-                      decoration: controller.usedLetters.contains(e)
-                          ? TextDecoration.lineThrough
-                          : null),
+              (e) => SizedBox(
+                width: 48,
+                height: 48,
+                child: OutlinedButton(
+                  onPressed: controller.usedLetters.contains(e)
+                      ? null
+                      : () => onTap(e),
+                  child: Visibility(
+                    visible: controller.usedLetters.contains(e) ? false : true,
+                    child: Center(
+                      child: Text(
+                        e,
+                        style: theme.textTheme.titleLarge!.copyWith(
+                          fontSize: 32,
+                          color:
+                              controller.nextLetter == e ? Colors.green : null,
+                          // decoration: controller.usedLetters.contains(e)
+                          //     ? TextDecoration.lineThrough
+                          //     : null,
+                        ),
+                      ),
+                    ),
+                  ),
                 ),
               ),
             )
