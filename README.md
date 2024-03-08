@@ -1,6 +1,7 @@
 # know_ur_words
 
-A new Flutter project.
+I tried to create a Game which i can play with my Wife for fun and to make decisions in our household easier. This Game help by gaming about decisions like: kitchen cleaning, laundy, who picks a film and so on.
+Website version can be found on [GitHub Pages Link](https://techonlygamer.github.io/flutter_know_ur_words)
 
 ## Getting Started
 
