@@ -5,6 +5,7 @@ import 'package:know_ur_words/config/router.dart';
 import 'package:know_ur_words/utils/string_hardcoded.dart';
 import 'package:know_ur_words/widgets/app_container.dart';
 import 'package:know_ur_words/widgets/help_button.dart';
+import 'package:know_ur_words/widgets/thememode_toggle_button.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -14,7 +15,12 @@ class HomeScreen extends StatelessWidget {
     final size = MediaQuery.of(context).size;
     final theme = Theme.of(context);
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        backgroundColor: theme.colorScheme.background,
+        actions: const [
+          ThemeModeButton(),
+        ],
+      ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Center(
@@ -32,9 +38,7 @@ class HomeScreen extends StatelessWidget {
                   softWrap: true,
                 ),
               ),
-              const SizedBox(
-                height: 32,
-              ),
+              const Spacer(),
               GestureDetector(
                 onTap: () => context.goNamed(AppRoutes.game.name),
                 child: AppContainer(
@@ -43,7 +47,9 @@ class HomeScreen extends StatelessWidget {
                   child: Text("Start Game".hardcoded),
                 ),
               ),
-              const Spacer(),
+              const Spacer(
+                flex: 2,
+              ),
               const HelpButton()
             ],
           ),

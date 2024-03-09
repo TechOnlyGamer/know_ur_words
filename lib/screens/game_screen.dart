@@ -5,23 +5,27 @@ import 'package:know_ur_words/widgets/alphabet_buttons.dart';
 import 'package:know_ur_words/widgets/game_button.dart';
 
 class GameScreen extends ConsumerWidget {
-  const GameScreen({super.key});
+  const GameScreen({super.key, this.title = "Category"});
+
+  final String title;
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final size = MediaQuery.of(context).size;
+    final theme = Theme.of(context);
 
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
+        backgroundColor: theme.colorScheme.background,
         title: Text(
-          "Pick ur Category".hardcoded,
+          title,
           style: Theme.of(context).textTheme.titleLarge,
         ),
       ),
       body: SingleChildScrollView(
-        child: Container(
-          margin: const EdgeInsets.all(8),
+        child: Padding(
+          padding: const EdgeInsets.all(16.0),
           child: Center(
             child: Column(
               mainAxisSize: MainAxisSize.max,

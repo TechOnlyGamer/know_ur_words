@@ -18,7 +18,7 @@ class AppContainer extends StatelessWidget {
         color: theme.scaffoldBackgroundColor,
         boxShadow: [
           BoxShadow(
-            color: theme.colorScheme.onBackground,
+            color: theme.colorScheme.background,
             blurRadius: 10,
             offset: const Offset(-4, -4),
             spreadRadius: 1,
