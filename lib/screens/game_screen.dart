@@ -13,8 +13,9 @@ class GameScreen extends ConsumerWidget {
 
     return Scaffold(
       appBar: AppBar(
+        centerTitle: true,
         title: Text(
-          "Welcome to Know Ur Words".hardcoded,
+          "Pick ur Category".hardcoded,
           style: Theme.of(context).textTheme.titleLarge,
         ),
       ),

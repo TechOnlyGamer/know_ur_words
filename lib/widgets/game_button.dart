@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:know_ur_words/provider/game_controller.dart';
 import 'package:know_ur_words/utils/string_hardcoded.dart';
+import 'package:know_ur_words/widgets/app_container.dart';
 import 'package:know_ur_words/widgets/timer.dart';
 
 class GameButton extends ConsumerWidget {
@@ -15,21 +16,16 @@ class GameButton extends ConsumerWidget {
       onTap: () {
         ref.read(gameControllerProvider.notifier).pushLetterToList();
       },
-      child: Container(
-        margin: const EdgeInsets.all(8),
+      child: AppContainer(
         width: size.width * 0.8,
         height: size.height * 0.3,
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(32),
-          border: Border.all(color: theme.primaryColor),
-        ),
         child: Column(
           mainAxisSize: MainAxisSize.max,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Icon(
               Icons.repeat,
-              color: theme.primaryColor,
+              color: theme.colorScheme.primary,
               size: 64,
             ),
             SizedBox(
@@ -49,6 +45,7 @@ class GameButton extends ConsumerWidget {
                   builder: (context) {
                     return AlertDialog(
                       title: Text("Time's up".hardcoded),
+                      actionsAlignment: MainAxisAlignment.center,
                       actions: [
                         ElevatedButton(
                             onPressed: () {
