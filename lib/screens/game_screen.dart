@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:know_ur_words/utils/string_hardcoded.dart';
 import 'package:know_ur_words/widgets/alphabet_buttons.dart';
 import 'package:know_ur_words/widgets/game_button.dart';
 

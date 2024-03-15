@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:know_ur_words/provider/thememode_provider.dart';
-import 'package:know_ur_words/widgets/app_container.dart';
 
 class ThemeModeButton extends ConsumerWidget {
   const ThemeModeButton({super.key});
