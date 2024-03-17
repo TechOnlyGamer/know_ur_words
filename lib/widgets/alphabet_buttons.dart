@@ -40,7 +40,7 @@ class AlphabetButtons extends ConsumerWidget {
                       child: Text(
                         e,
                         style: theme.textTheme.titleLarge!.copyWith(
-                          fontSize: 32,
+                          fontSize: 28,
                           color:
                               controller.nextLetter == e ? Colors.green : null,
                           // decoration: controller.usedLetters.contains(e)

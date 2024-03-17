@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
-import 'package:know_ur_words/config/router.dart';
+import 'package:know_ur_words/screens/game_settings_screen.dart';
 import 'package:know_ur_words/utils/string_hardcoded.dart';
 import 'package:know_ur_words/widgets/app_container.dart';
 import 'package:know_ur_words/widgets/help_button.dart';
@@ -39,11 +38,19 @@ class HomeScreen extends StatelessWidget {
               ),
               const Spacer(),
               GestureDetector(
-                onTap: () => context.goNamed(AppRoutes.game.name),
+                onTap: () => showModalBottomSheet(
+                  context: context,
+                  builder: (context) {
+                    return const GameSettingsScreen();
+                  },
+                ),
                 child: AppContainer(
                   width: size.width * 0.5,
                   height: size.height * 0.1,
-                  child: Text("Start Game".hardcoded),
+                  child: Text(
+                    "Start Game".hardcoded,
+                    style: theme.textTheme.titleLarge,
+                  ),
                 ),
               ),
               const Spacer(

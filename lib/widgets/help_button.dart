@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:know_ur_words/const/help_text.dart';
 import 'package:know_ur_words/utils/string_hardcoded.dart';
 import 'package:know_ur_words/widgets/app_container.dart';
 
@@ -12,7 +13,7 @@ class HelpButton extends StatelessWidget {
         context: context,
         builder: (context) => AlertDialog(
             title: Text("Rules".hardcoded),
-            content: Text("How to Play".hardcoded),
+            content: Text(helpText),
             actionsAlignment: MainAxisAlignment.center,
             actions: [
               TextButton(

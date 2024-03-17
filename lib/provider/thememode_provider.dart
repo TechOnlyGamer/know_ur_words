@@ -6,9 +6,10 @@ part 'thememode_provider.g.dart';
 class ThemeModeController extends _$ThemeModeController {
   @override
   ThemeMode build() {
-    return ThemeMode.system == ThemeMode.dark
-        ? ThemeMode.dark
-        : ThemeMode.light;
+    // return ThemeMode.system == ThemeMode.dark
+    //     ? ThemeMode.dark
+    //     : ThemeMode.light;
+    return ThemeMode.dark;
   }
 
   get isDark => state == ThemeMode.dark;

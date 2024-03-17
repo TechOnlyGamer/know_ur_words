@@ -18,7 +18,7 @@ class GameButton extends ConsumerWidget {
       },
       child: AppContainer(
         width: size.width * 0.8,
-        height: size.height * 0.3,
+        height: size.height * 0.2,
         child: Column(
           mainAxisSize: MainAxisSize.max,
           mainAxisAlignment: MainAxisAlignment.center,
@@ -29,14 +29,14 @@ class GameButton extends ConsumerWidget {
               size: 64,
             ),
             SizedBox(
-              height: size.height * 0.02,
+              height: size.height * 0.01,
             ),
             Text(
               "Next Player".hardcoded,
               style: theme.textTheme.titleLarge,
             ),
             SizedBox(
-              height: size.height * 0.02,
+              height: size.height * 0.01,
             ),
             CountdownTimer(
               onFinished: () {
